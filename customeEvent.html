@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+  <button id="buyButton">Buy Now</button>
+  <script>
+    // 1. Create an event target
+    const target = new EventTarget();
+    // 2. Listen for our custom event
+    target.addEventListener("purchaseCompleted", (event) => {
+      console.log("Purchase successful!");
+      console.log("Event name:", event.type);
+    });
+    // 3. When the button is clicked...
+    document.getElementById("buyButton")
+      .addEventListener("click", () => {
+        console.log("Buy button clicked!");
+        // 4. Create and trigger our custom event
+        const event = new Event("purchaseCompleted");
+        target.dispatchEvent(event);
+      });
+
+      var tom="cruse with var";
+      let jack="sprraow with let"
+      const harry="i am const potter";
+      console.log(window.tom);
+      console.log(window.jack);
+      console.log(window.harry);
+
+
+
+
+  </script>
+</body>
+</html>

@@ -12,4 +12,6 @@ function main() {
     console.log(total);
 }
 
+export const checking="i am here";
+
 main();
